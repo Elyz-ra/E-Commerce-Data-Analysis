@@ -8,12 +8,12 @@ st.set_page_config(page_title="E-Commerce Dashboard", layout="wide")
 # --- Load Dataset ---
 @st.cache_data
 def load_data():
-    df_orders = pd.read_csv("data/orders_dataset.csv", parse_dates=["order_purchase_timestamp"])
-    df_order_items = pd.read_csv("data/order_items_dataset.csv")
-    df_payments = pd.read_csv("data/order_payments_dataset.csv")
-    df_reviews = pd.read_csv("data/order_reviews_dataset.csv")
-    df_customers = pd.read_csv("data/customers_dataset.csv")
-    df_geolocation = pd.read_csv("data/geolocation_dataset.csv")
+    df_orders = pd.read_csv("dashboard/data/orders_dataset.csv", parse_dates=["order_purchase_timestamp"])
+    df_order_items = pd.read_csv("dashboard/data/order_items_dataset.csv")
+    df_payments = pd.read_csv("dashboard/data/order_payments_dataset.csv")
+    df_reviews = pd.read_csv("dashboard/data/order_reviews_dataset.csv")
+    df_customers = pd.read_csv("dashboard/data/customers_dataset.csv")
+    df_geolocation = pd.read_csv("dashboard/data/geolocation_dataset.csv")
     return df_orders, df_order_items, df_payments, df_reviews, df_customers, df_geolocation
 
 df_orders, df_order_items, df_payments, df_reviews, df_customers, df_geolocation = load_data()
